@@ -1,0 +1,69 @@
+.profile-buttons__block {
+  margin-top: 10px;
+}
+
+.profile-buttons__block > .profile-buttons__title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.profile-buttons__block > .profile-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-buttons__block > .profile-buttons > .profile-buttons__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid var(--contact-icon);
+  border-bottom: 1px solid var(--contact-icon);
+  height: 40px;
+  padding: 10px 10px 10px 20px;
+  transition: .3s;
+}
+
+.profile-buttons__block > .profile-buttons > .profile-buttons__btn:hover {
+  cursor: pointer;
+  background-color: var(--contact-icon);
+  color: var(--background);
+  transition: .3s;
+}
+
+.profile-buttons__block > .profile-buttons > .profile-buttons__btn:hover > .btn__text {
+  color: var(--background);
+  transition: .3s;
+}
+
+.profile-buttons__block > .profile-buttons > .profile-buttons__btn > img {
+  position: absolute;
+  left: 10px;
+}
+
+.profile-buttons__block > .profile-buttons > .profile-buttons__btn > .btn__text {
+  color: var(--contact-icon);
+}
+
+.profile-buttons__block > .profile-buttons > .disabled {
+  opacity: .3;
+  pointer-events: none;
+  cursor: default;
+}
+
+@media (max-width: 800px) {
+  .profile-buttons__block > .profile-buttons > .profile-buttons__btn > img {
+    position: relative;
+    left: 0;
+    padding-bottom: 10px;
+  }
+  .profile-buttons__block > .profile-buttons > .profile-buttons__btn {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+}
